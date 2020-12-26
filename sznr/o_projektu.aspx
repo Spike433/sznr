@@ -1,4 +1,4 @@
-﻿<%@ Page Title="O projektu" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="o_projektu.aspx.cs" Inherits="sznp.o_projektu" %>
+﻿<%@ Page Title="O projektu" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="o_projektu.aspx.cs" Inherits="sznr.o_projektu" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
   

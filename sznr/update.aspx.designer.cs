@@ -11,7 +11,7 @@ namespace sznr
 {
 
 
-    public partial class o_projektu
+    public partial class update
     {
     }
 }
