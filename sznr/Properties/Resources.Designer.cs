@@ -59,14 +59,5 @@ namespace sznr.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string data {
-            get {
-                return ResourceManager.GetString("data", resourceCulture);
-            }
-        }
     }
 }

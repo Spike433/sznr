@@ -5,19 +5,13 @@
 
     <div class="jumbotron">
      
-        <h3>Podaci</h3>
-        <h5>
+        <h3>Data</h3>
         
-            &nbsp;</h5>
-        <p>
         
-            &nbsp;</p>
-        <p>
+
+
         
-            &nbsp;</p>
-        <p>
-        
-            &nbsp;</p>
+            
         <p>
         
             &nbsp;</p>
