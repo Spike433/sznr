@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - SZNR</title>
+    <title><%: Page.Title %> - My ASP.NET Application</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -15,15 +15,9 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <style type="text/css">
-        .newStyle1 {
-            color: #FF0000;
-        }
-    </style>
-
 </head>
 <body>
-    <form runat="server" style="font-size: large">
+    <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -48,38 +42,27 @@
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                       
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                       
-                        
-                        
+                        <span class="icon-bar"></span>
                     </button>
-                    
+                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
                 </div>
-
                 <div class="navbar-collapse collapse">
-
                     <ul class="nav navbar-nav">
-                         <li><a runat="server" href="~/">SZNR</a></li>                          
-                       
-                         <li><a runat="server" href="~/o_projektu">Posebnosti projekta</a></li>
-                         
-                                          
-                       
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
                 </div>
-                
             </div>
         </div>
-
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p><span class="newStyle1">&copy; </span> <span class="newStyle1"><%: DateTime.Now.Year %> </span>  <span class="newStyle1">Juraj Hlevnjak</span></p>
-                
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
             </footer>
         </div>
 

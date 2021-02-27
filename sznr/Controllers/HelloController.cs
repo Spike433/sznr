@@ -12,13 +12,30 @@ using sznr;
 namespace HelloWebAPI.Controller
 {
     public class HelloController : ApiController
+
     {
-        //https://localhost:44325/api/hello?param1=20190614T041236&param2=car&api_key=M6N015C8W6ALJ
+        //POST https://localhost:44325/api/hello?param1=20190614T041236&param2=car&api_key=M6N015C8W6ALJ
 
-        static List<Customer> customers = new List<Customer>();
+        //DELETE https://localhost:44325/api/hello?id=0
 
-        static int delay = 30;
+        private static List<Customer> customers = new List<Customer>();
 
+        static readonly int delay = 30;
+
+        public List<Customer> GetList()
+        {
+            return customers.ToList<Customer>();
+        }
+
+        public HttpResponseMessage Get(int id)
+        {
+            if (id == 0)
+            {
+                customers = new List<Customer>();
+
+                return Request.CreateResponse(HttpStatusCode.OK);
+            }else return Request.CreateResponse(HttpStatusCode.BadRequest);
+        }
                
         public HttpResponseMessage Post([FromUri] Customer customer)
         {
@@ -43,9 +60,9 @@ namespace HelloWebAPI.Controller
 
                     timePeriods.Add(new TimeBlock(parsedLine, Duration.Minutes(delay)));
 
-                    if (timePeriods.Last().OverlapsWith(timePeriod))
+                    if (timePeriods.Last().IntersectsWith(timePeriod))
                     {
-                        return Request.CreateResponse(HttpStatusCode.Created,customers);
+                        return Request.CreateResponse(HttpStatusCode.Created,customers.ToList<Customer>());
 
                     }
 
